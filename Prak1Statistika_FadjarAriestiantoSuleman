@@ -1,0 +1,7 @@
+data_Fadjar = read.delim("clipboard")
+View(data_Fadjar)
+mean(data_Fadjar$Tinggi.Badan)
+str(data_Fadjar)
+data_Fadjar_csv = read.csv("dd)
+View(data_Fadjar)
+library("xlsx")
