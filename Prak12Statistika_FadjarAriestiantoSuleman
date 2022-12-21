@@ -1,0 +1,15 @@
+#latihanpertama
+df_fadjar=read.delim("clipboard")
+head(df_fadjar)
+model_reg=lm(df_fadjar$y~df_fadjar$x)
+summary(model_reg)
+#latihankedua
+df_fadjar=read.delim("clipboard")
+head(df_fadjar)
+df_fadjar$brick_dummy <- ifelse(df_fadjar$Brick == "Yes", 1,0)
+df_fadjar$N_dummy1 <- ifelse(df_fadjar$Neighborhood == "West", 1,0)
+df_fadjar$N_dummy2 <- ifelse(df_fadjar$Neighborhood == "North", 1,0)
+model_reg=lm(df_fadjar$Price~df_fadjar$SqFt+df_fadjar$Bedrooms+df_fadjar$Bathrooms+df_fadjar$brick_dummy+df_fadjar$N_dummy1+df_fadjar$N_dummy2)
+summary(model)
+by(df_fadjar$Price, df_fadjar$Neighborhood, mean)
+by(df_fadjar$Price, df_fadjar$Brick, mean)
