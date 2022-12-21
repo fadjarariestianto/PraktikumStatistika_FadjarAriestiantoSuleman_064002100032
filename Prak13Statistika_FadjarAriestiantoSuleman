@@ -1,0 +1,23 @@
+#latihanpertama
+dataku_fadjar = read.delim('clipboard')
+View(dataku_fadjar)
+wilcox.test(dataku_fadjar$Sebelum,dataku_fadjar$Setelah,paired=TRUE)
+\\\
+dataku_fadjar = read.delim('clipboard')
+View(dataku_fadjar)
+wilcox.test(dataku_fadjar$Sebelum,dataku_fadjar$Sesudah,paired=TRUE)
+#Latihankedua
+df_fadjar=read.delim('clipboard')
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_fadjar$obat~df_fadjar$grup)
+# where y is numeric and A is A binary factor
+head(df_fadjar)
+rank(df_fadjar$obat)
+#LatihanKetiga
+dataku_fadjar = read.delim('clipboard')
+View(dataku_fadjar)
+wilcox.test(dataku_fadjar$Ganjil,dataku_fadjar$Genap ,paired=TRUE)
+\\\
+dataku_fadjar = read.delim('clipboard')
+View(dataku_fadjar)
+wilcox.test(dataku_fadjar$caffeine,dataku_fadjar$placebo ,paired=TRUE)
