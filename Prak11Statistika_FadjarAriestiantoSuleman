@@ -1,0 +1,14 @@
+#latihanPertama
+df_nama = read.delim("clipboard")
+View(df_fadjar)
+model <- aov(korosi.y.~metode.x., data=df_fadjar)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
+#latihankedua
+df_fadjar=PlantGrowth
+View(df_fadjar)
+model <- aov(weight~group, data=df_fadjar)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
